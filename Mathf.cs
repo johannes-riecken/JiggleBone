@@ -165,9 +165,7 @@ public partial struct Mathf
     public const float Rad2Deg = 1F / Deg2Rad;
 
     // A tiny floating point value (RO).
-    public static readonly float Epsilon =
-        UnityEngineInternal.MathfInternal.IsFlushToZeroEnabled ? UnityEngineInternal.MathfInternal.FloatMinNormal
-        : UnityEngineInternal.MathfInternal.FloatMinDenormal;
+    public static readonly float Epsilon = Single.Epsilon;
 
     // Clamps a value between a minimum float and maximum float value.
     public static float Clamp(float value, float min, float max)
